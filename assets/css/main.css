@@ -3230,6 +3230,8 @@ input, select, textarea {
 		border-top-right-radius: 0.25em;
 		cursor: default;
 		text-align: center;
+		/* margin-left: 30%; */
+		/* border-bottom: solid 1px #dddddd; */
 	}
 
 		#nav input, #nav select, #nav textarea {
@@ -3551,12 +3553,13 @@ input, select, textarea {
 		}
 
 		#main dl dt {
-			color: #636363;
+			color: white;
 		}
 
 		#main header.major h2:after {
-			background-color: #101010;
-			color: white;
+			background-color: white;
+			justify-content: center !important;
+			/* color: #101010; */
 			/* background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
@@ -3568,11 +3571,11 @@ input, select, textarea {
 		}
 
 			#main table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: #101010;
 			}
 
 		#main table th {
-			color: #636363;
+			color: #101010;
 		}
 
 		#main table thead {
