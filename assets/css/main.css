@@ -3220,17 +3220,22 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #101010;
 		color: white;
-		position: absolute;
+		/* position: absolute; */
 		width: 64em;
-		max-width: calc(100% - 4em);
+		max-width: 100%;
 		padding: 1em;
-		background-color: #101010;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
 		text-align: center;
+		position: fixed;
+		top: 0;
+		background-color: #1f1f1f;
+		z-index: 10000;
+		/* border-radius: 0 0 0 8px; */
+		margin: 0;
+	
 		/* margin-left: 30%; */
 		/* border-bottom: solid 1px #dddddd; */
 	}
@@ -3347,7 +3352,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #101010;
 		color: #636363;
 		border-radius: 0.25em;
 	}
@@ -3887,7 +3892,7 @@ input, select, textarea {
 	50% { border-color: white; }
 }
 
-#animated-text {
+/* #animated-text {
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: .15em solid white;
@@ -3897,15 +3902,179 @@ input, select, textarea {
 	animation:
 	typing 2s steps(40, end), 
 	blink-caret .75s step-end infinite;
+} */
+
+#animated-text {
+    overflow: hidden;
+    border-right: .15em solid #8A2387;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 1s steps(40, end),
+        blink-caret .75s step-end infinite;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: white;
+    border-right-color: transparent;
 }
 
-.project-container {
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #8A2387; }
+}
+
+/* Projects Section */
+#projects {
+    padding: 4rem 2rem;
+    background-color: #101010;
+}
+
+#projects h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 2.5em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flip-card-container {
+    perspective: 1000px;
+    height: 550px;
+}
+
+.no-flip-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.project-links {
+    position: relative;
+    z-index: 3;
+	height: 32px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: #1f1f1f;
+    box-shadow: 0 0 15px #8A2387;
+}
+
+.project-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-front h3 {
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 1.5em;
+}
+
+.project-front p {
+    color: #aaa;
+    font-size: 0.9em;
+    min-height: 60px;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project-links a {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: #8A2387;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.project-links a:hover {
+    background: #8A2387;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.skill-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item span {
+    color: white;
+    font-size: 0.8em;
+}
+
+/* .project-container {
     width: 30%;
     float: left;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-    /* border: 2px solid #8A2387;  */
 	margin: 1.5%;
 	border-radius: 15px;
 	box-shadow: 0 0 10px #8A2387;
@@ -3928,7 +4097,7 @@ input, select, textarea {
         bottom: 20px;
         right: 20px;
     }
-}
+} */
 
 .hyperlink {
 	bottom: 20px;
