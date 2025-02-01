@@ -4106,6 +4106,50 @@ input, select, textarea {
     font-size: 0.8em;
 }
 
+
+.education-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.education-card {
+    background: #1f1f1f;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 500px;
+    -webkit-box-shadow: 5px 5px 15px rgba(138, 35, 135, 0.3),
+                       -5px -5px 15px rgba(36, 36, 36, 0.3);
+            box-shadow: 5px 5px 15px rgba(138, 35, 135, 0.3),
+                       -5px -5px 15px rgba(36, 36, 36, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    border-bottom: 1px solid #8A2387;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .education-card {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .education-grid {
+        padding: 0 1rem;
+    }
+}
+
 /* .project-container {
     width: 30%;
     float: left;
