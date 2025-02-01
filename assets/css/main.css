@@ -3844,10 +3844,47 @@ input, select, textarea {
 	margin: 1rem;
 	margin-bottom: 20px;
 	border-radius: 6px;
+	width: 120%;
+}
+
+.timeline-date {
+	color: white;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0rem;
+	margin-top: -1rem;
+}
+
+.job-title {
+    color: white !important;
+    margin-bottom: 1.5rem !important;
+	margin-top: -1rem !important;
+    font-size: 1em;
+}
+
+.job-description p {
+    color: #c4c4c4 !important;
+    font-size: 0.8em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .timeline-date {
+        display: none;
+    }
 }
 
 .timeline-component {
-	height: 60%;
+	height: 85%;
 	margin: 0px 20px 60px 20px;
 }
 
@@ -3858,7 +3895,7 @@ input, select, textarea {
 	}
 	.timeline-middle {
 	position: relative;
-	background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+	background-image: linear-gradient(45deg, #8f3a8c, #8a2b87, #8A2387);
 	width: 3px;
 	height: 100%;
 	}
@@ -3867,7 +3904,7 @@ input, select, textarea {
 	}
 	.timeline-circle {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	left: 50%;
 	width: 15px;
 	height: 15px;
