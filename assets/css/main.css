@@ -3990,7 +3990,7 @@ input, select, textarea {
 
 .flip-card-container {
     perspective: 1000px;
-    height: 550px;
+    height: 650px;
 }
 
 .no-flip-trigger {
@@ -4053,7 +4053,7 @@ input, select, textarea {
 }
 
 .project-front p {
-    color: #aaa;
+    color: white;
     font-size: 0.9em;
     min-height: 60px;
 }
@@ -4200,7 +4200,7 @@ input, select, textarea {
 }
 
 .about-me {
-    max-width: 700px;
+    max-width: 925px;
     margin: 20px auto 0;
     padding: 0 15px;
     font-size: 0.9em;
@@ -4211,4 +4211,24 @@ input, select, textarea {
 
 .about-me p {
     margin: 0;
+}
+
+.button.primary {
+	transform: translateY(-2px);
+    background-image: #101010;
+	background-color: #101010;
+    border: 1px solid #636363;
+	border-color: #636363;
+    transition: transform 0.3s ease;
+}
+
+.button.primary:hover {
+    background-image: rgba(222, 222, 222, 0.25);
+	background-color: rgba(222, 222, 222, 0.25);
+}
+
+/* Adjust header button alignment */
+header#header .button {
+    margin: 0 0.5em;
+    vertical-align: middle;
 }
